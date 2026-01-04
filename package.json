@@ -1,0 +1,17 @@
+{
+  "name": "personal-resume",
+  "version": "1.0.0",
+  "description": "个人简历页面 - React 版本",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 3000",
+    "dev": "npx http-server -p 3000 -o"
+  },
+  "keywords": [
+    "react",
+    "resume",
+    "personal"
+  ],
+  "author": "",
+  "license": "MIT"
+}
