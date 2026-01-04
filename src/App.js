@@ -31,12 +31,13 @@ function Hero() {
         <div className="hero">
             <div className="profile-image-container">
                 <div className="profile-image">
-                    <span>ZH</span>
+                    <span>YZ</span>
                 </div>
             </div>
-            <h1 className="glitch-text" data-text="张三">张三</h1>
-            <p className="title">全栈开发工程师</p>
-            <p className="tagline">用代码构建未来，用创新改变世界</p>
+            <h1 className="glitch-text" data-text="Yuanzhen Zhu">Yuanzhen Zhu</h1>
+            <p className="title">Digital Product Manager</p>
+            <p className="tagline">Innovating digital solutions, transforming user experiences</p>
+            <p className="location">📍 Madrid, España</p>
         </div>
     );
 }
@@ -47,10 +48,11 @@ function About() {
         <div className="section">
             <h2 className="section-title">关于我</h2>
             <p className="about-text">
-                我是一名充满激情的全栈开发工程师，专注于创造优雅且高效的数字解决方案。
-                拥有5年以上的开发经验，精通前端和后端技术栈。我热爱探索新技术，
-                并将其应用于实际项目中。我相信优秀的代码不仅是功能性的，更是一门艺术。
-                在业余时间，我喜欢参与开源项目，分享技术见解，并持续学习最新的技术趋势。
+                我是一名充满激情的数字产品经理，专注于创造优雅且高效的数字解决方案。
+                拥有超过5年的产品管理经验，曾在 CAF Digital Services、Autoscout24 和华为等知名公司工作。
+                我热爱将数据转化为洞察，并将创新理念转化为成功的产品。我相信优秀的产品不仅要功能强大，
+                更要为用户创造真正的价值。在业余时间，我喜欢学习最新的技术趋势，参与数据分析项目，
+                并持续提升自己在数字产品领域的能力。
             </p>
         </div>
     );
@@ -91,12 +93,12 @@ function SkillItem({ name, level }) {
 // 技能组件
 function Skills() {
     const skills = [
-        { name: 'JavaScript / TypeScript', level: 95 },
-        { name: 'React / Vue', level: 90 },
-        { name: 'Node.js', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: '云服务 (AWS/阿里云)', level: 75 },
-        { name: 'Docker / Kubernetes', level: 70 },
+        { name: 'Digital Product Management', level: 95 },
+        { name: 'Análisis de datos', level: 90 },
+        { name: 'Power BI', level: 85 },
+        { name: 'SQL', level: 80 },
+        { name: 'Agile Methodologies', level: 85 },
+        { name: 'User Experience Design', level: 75 },
     ];
 
     return (
@@ -105,6 +107,53 @@ function Skills() {
             <div className="skills-grid">
                 {skills.map((skill) => (
                     <SkillItem key={skill.name} name={skill.name} level={skill.level} />
+                ))}
+            </div>
+        </div>
+    );
+}
+
+// 语言组件
+function Languages() {
+    const languages = [
+        { name: 'Chino (simplificado)', level: 'Native or Bilingual', flag: '🇨🇳' },
+        { name: 'Español', level: 'Full Professional', flag: '🇪🇸' },
+        { name: 'Inglés', level: 'Full Professional', flag: '🇬🇧' },
+    ];
+
+    return (
+        <div className="section">
+            <h2 className="section-title">语言能力</h2>
+            <div className="skills-grid">
+                {languages.map((lang, index) => (
+                    <div className="skill-item" key={index}>
+                        <div className="skill-name">{lang.flag} {lang.name}</div>
+                        <div className="skill-level-text">{lang.level}</div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
+
+// 认证组件
+function Certifications() {
+    const certs = [
+        { name: 'Digital Product Management', issuer: 'The Hero Camp', year: '2020' },
+        { name: 'SQL for Data Science', issuer: 'Certification', year: '' },
+        { name: 'Técnica Superior de Audiovisuales', issuer: 'IES Puerta Bonita', year: '2010' },
+    ];
+
+    return (
+        <div className="section">
+            <h2 className="section-title">专业认证</h2>
+            <div className="timeline">
+                {certs.map((cert, index) => (
+                    <div className="timeline-item" key={index}>
+                        <div className="timeline-date">{cert.year}</div>
+                        <div className="timeline-title">{cert.name}</div>
+                        <div className="timeline-subtitle">{cert.issuer}</div>
+                    </div>
                 ))}
             </div>
         </div>
@@ -127,22 +176,52 @@ function TimelineItem({ date, title, subtitle, description }) {
 function Experience() {
     const experiences = [
         {
-            date: '2021 - 至今',
-            title: '高级全栈工程师',
-            subtitle: '科技创新公司',
-            description: '负责公司核心产品的前后端开发，带领团队完成多个重要项目。优化系统性能，提升用户体验。引入微服务架构，提高系统可扩展性。'
+            date: 'Mayo 2022 - Presente',
+            title: 'Product Manager',
+            subtitle: 'CAF Digital Services',
+            description: '负责数字产品管理，推动产品战略和 roadmap。与跨职能团队协作，开发创新的数字解决方案。通过数据分析优化产品性能，提升用户体验。'
         },
         {
-            date: '2019 - 2021',
-            title: '前端开发工程师',
-            subtitle: '互联网创业公司',
-            description: '参与多个Web应用的开发，使用React和Vue构建用户界面。与设计团队紧密合作，将设计稿高质量还原为代码。'
+            date: 'Abril 2021 - Mayo 2022',
+            title: 'Product Manager',
+            subtitle: 'Sumauto / Vocento (Autoscout24/Autocasión)',
+            description: '管理汽车平台产品，协调产品开发流程。分析市场趋势和用户需求，推动产品功能迭代和优化。'
         },
         {
-            date: '2018 - 2019',
-            title: '初级开发工程师',
-            subtitle: '软件解决方案公司',
-            description: '参与企业级应用的开发和维护。学习并掌握了多种编程语言和开发工具。'
+            date: 'Abril 2018 - Abril 2021',
+            title: 'Product Manager',
+            subtitle: 'Huawei CBG España - HUAWEI Mobile Services',
+            description: '负责华为移动服务产品管理。与全球团队协作，推动产品在欧洲市场的落地和本地化。'
+        },
+        {
+            date: 'Septiembre 2017 - Marzo 2018',
+            title: 'Client Advisor',
+            subtitle: 'Salvatore Ferragamo',
+            description: '为客户提供高端购物体验，维护客户关系，提升品牌价值和客户满意度。'
+        },
+        {
+            date: 'Marzo 2017 - Septiembre 2017',
+            title: 'Client Advisor',
+            subtitle: 'young promotion GmbH - Yves Saint Laurent, Helena Rubinstein',
+            description: '在马德里机场为奢侈品牌提供客户咨询服务，提升客户购物体验。'
+        },
+        {
+            date: 'Enero 2010 - Febrero 2017',
+            title: 'Freelance',
+            subtitle: 'Translation and Language Classes',
+            description: '提供翻译服务和语言课程，帮助客户提升语言能力和跨文化交流。'
+        },
+        {
+            date: 'Septiembre 2011 - Junio 2012',
+            title: 'Language Teacher',
+            subtitle: 'International Institute Of Languages',
+            description: '教授语言课程，帮助学生掌握语言技能和跨文化交流能力。'
+        },
+        {
+            date: 'Febrero 2010 - Junio 2010',
+            title: 'Intern Web Development',
+            subtitle: 'Laborla. Co. Ltd',
+            description: '参与网页开发项目，学习前端和后端开发技术。'
         }
     ];
 
@@ -160,16 +239,34 @@ function Experience() {
 
 // 教育背景组件
 function Education() {
+    const education = [
+        {
+            date: '2020',
+            title: 'Digital Product Management',
+            subtitle: 'The Hero Camp',
+            description: '专注于数字产品管理的专业培训课程，学习产品策略、用户研究和敏捷开发方法。'
+        },
+        {
+            date: '2010 - 2014',
+            title: 'Estudio de Asia y África',
+            subtitle: 'Universidad Autónoma de Madrid',
+            description: '深入学习亚洲和非洲的文化、历史和政治，培养国际视野和跨文化理解能力。'
+        },
+        {
+            date: '2008 - 2010',
+            title: 'Formación Profesional Superior - Realización de audiovisuales y espectáculos',
+            subtitle: 'IES Puerta Bonita',
+            description: '学习视听制作和娱乐行业的专业技术，包括视频制作、音频处理和多媒体设计。'
+        }
+    ];
+
     return (
         <div className="section">
             <h2 className="section-title">教育背景</h2>
             <div className="timeline">
-                <TimelineItem
-                    date="2014 - 2018"
-                    title="计算机科学与技术"
-                    subtitle="某某大学 - 本科"
-                    description="主修计算机科学核心课程，包括数据结构、算法、操作系统、数据库等。毕业设计获得优秀毕业论文奖。"
-                />
+                {education.map((edu, index) => (
+                    <TimelineItem key={index} {...edu} />
+                ))}
             </div>
         </div>
     );
@@ -178,10 +275,9 @@ function Education() {
 // 联系方式组件
 function Contact() {
     const contacts = [
-        { icon: '📧', text: 'zhangsan@example.com', href: 'mailto:zhangsan@example.com' },
-        { icon: '💻', text: 'GitHub', href: 'https://github.com' },
-        { icon: '💼', text: 'LinkedIn', href: 'https://linkedin.com' },
-        { icon: '🐦', text: 'Twitter', href: 'https://twitter.com' },
+        { icon: '📧', text: 'holazhu@icloud.com', href: 'mailto:holazhu@icloud.com' },
+        { icon: '💼', text: 'LinkedIn', href: 'https://www.linkedin.com/in/yuanzhenzhu' },
+        { icon: '🌍', text: 'Madrid, España', href: '#' },
     ];
 
     return (
@@ -189,7 +285,7 @@ function Contact() {
             <h2 className="section-title">联系方式</h2>
             <div className="contact-links">
                 {contacts.map((contact, index) => (
-                    <a key={index} href={contact.href} className="contact-link" target="_blank" rel="noopener noreferrer">
+                    <a key={index} href={contact.href} className="contact-link" target={contact.href !== '#' ? '_blank' : ''} rel="noopener noreferrer">
                         {contact.icon} {contact.text}
                     </a>
                 ))}
@@ -249,6 +345,8 @@ function App() {
                 <Hero />
                 <About />
                 <Skills />
+                <Languages />
+                <Certifications />
                 <Experience />
                 <Education />
                 <Contact />

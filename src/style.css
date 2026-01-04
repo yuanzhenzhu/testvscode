@@ -344,6 +344,22 @@ body {
     transition: width 1s ease-out;
 }
 
+.skill-level-text {
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--neon-cyan);
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* Location */
+.location {
+    font-size: 1.1rem;
+    color: var(--neon-pink);
+    margin-top: 15px;
+    animation: fadeInUp 1s ease-out;
+}
+
 /* Timeline */
 .timeline {
     position: relative;
